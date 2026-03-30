@@ -17,12 +17,12 @@ void loop()
   
   if(value == 0){
     Serial.println("motion not detected");
-    analogWrite(LED,0);
+    digitalWrite(LED, LOW);
     analogWrite(BUZZER,0);
   }
   if(value == 1){
     Serial.println("motion detected");
-    analogWrite(LED,255);
+    digitalWrite(LED, HIGH);
     analogWrite(BUZZER,200);
     delay(500);
   }
